@@ -1,0 +1,1 @@
+snowflake-connector-python, requests, pandas, write_pandas
