@@ -1,9 +1,9 @@
-# Hyperliquid DeFi Ecosystem Analytics (E2E Pipeline)
+# HyperEVM DeFi Ecosystem Analytics (E2E Pipeline)
 
 
 
 ## 📊 Overview
-This project is an End-to-End (E2E) data pipeline designed to track and analyze the Total Value Locked (TVL) and token distribution across the Hyperliquid L1 DeFi ecosystem. It ingests historical data (56,000+ rows) from the DefiLlama API, processes it via Python, stores it in a Snowflake Data Warehouse, and visualizes insights in Power BI.
+This project is an End-to-End (E2E) data pipeline designed to track and analyze the Total Value Locked (TVL) and token distribution across the HyperEVM DeFi ecosystem. It ingests historical data (from 19.02.2025 to 24.01.2026) from the DefiLlama API, processes it via Python, stores it in a Snowflake Data Warehouse, and visualizes insights in Power BI.
 
 
 
@@ -22,21 +22,14 @@ This project is an End-to-End (E2E) data pipeline designed to track and analyze 
 5. **Analytics:** Power BI dashboard featuring WoW/MoM growth metrics and Market Concentration (HHI).
 
 ## 🚀 Key DAX Metrics Implemented
-- **Time Intelligence:** Custom WoW and MoM growth measures using manual date anchoring to handle API data latency.
-- **Market Share %:** Dynamic protocol dominance calculation using `ALL` and `CALCULATE` context transition.
+- **Time Intelligence:** Custom WoW, MoM and YoY growth measures using manual date anchoring to handle API data latency.
 - **Concentration Index:** Herfindahl-Hirschman Index (HHI) implementation to measure ecosystem health.
 
 ## 📂 Project Structure
 - `/data_pipeline`: Python ETL scripts and `requirements.txt`.
 - `/snowflake_sql`: DDL and DML scripts for database setup.
 - `/dashboard`: Power BI `.pbix` file and screenshots.
-
-## 📝 Setup Instructions
-1. Clone the repository.
-2. Install dependencies: `pip install -r data_pipeline/requirements.txt`.
-3. Execute `snowflake_sql/table_setup.sql` in your Snowflake worksheet.
-4. Configure your `.env` file with Snowflake credentials.
-5. Run the loader: `python data_pipeline/final_loader.py`.
+  
 
 ## 📈 Dashboard Preview
 - [Main Dashboard](dashboard/dashboard_main_.png)
